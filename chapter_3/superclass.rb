@@ -55,4 +55,6 @@ car.gas_used = 366
 
 puts "Lifetime MPG:"
 puts car.mileage
+puts car.instance_variables
+
 
