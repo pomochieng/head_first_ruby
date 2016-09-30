@@ -42,8 +42,12 @@ truck = Truck.new
 truck.accelerate
 truck.steer
 truck.load_bed("259 bouncy balls")
+truck.odometer = 11432
+truck.gas_used = 366
 
 puts "The truck is carrying #{truck.cargo}."
+puts "Average MPG:"
+puts truck.mileage
 
 car = Car.new
 car.odometer = 11432
