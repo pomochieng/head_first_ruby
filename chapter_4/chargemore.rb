@@ -19,7 +19,8 @@ class Employee
   def print_pay_stub
     puts "Name: #{@name}" #Print the employee name
     pay_for_period = (salary / 365.0) * 14   #Calculate a 14-day portion of the employee's salary.
-    puts "Pay This Period: $#{pay_for_period}" #Print the amount paid
+    formatted_pay = format("%.2f", pay_for_period) # Get a string with the pay amount rounded to two decimal places.
+    puts "Pay This Period: $#{formatted_pay}" #Print the formatted amount string
   end
 end
 
@@ -38,6 +39,7 @@ employee.print_pay_stub
 #ben = Employee.new
 #ben.salary = -246
 
+amy.salary = 50000
 amy.print_pay_stub #Close, but where are the cents?
 
 
