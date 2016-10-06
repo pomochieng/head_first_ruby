@@ -1,5 +1,5 @@
 require 'sinatra'
 
-get('/movies') do
-  'Coming Soon.......'
+get('/movies') do  #Responds to GET requests for "/movies".
+  erb :index       #Load "views/index.erb"
 end
