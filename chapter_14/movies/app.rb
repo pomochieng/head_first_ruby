@@ -11,3 +11,8 @@ get('/movies') do  #Responds to GET requests for "/movies".
   @movies[2].title = "Terminator 2"
   erb :index       #Load "views/index.erb"
 end
+
+get('/movies/new') do    #Add a second route, with a different path.
+  erb :new      #Load "views/new.erb"
+end
+
