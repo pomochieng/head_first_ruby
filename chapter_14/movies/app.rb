@@ -16,3 +16,10 @@ get('/movies/new') do    #Add a second route, with a different path.
   erb :new      #Load "views/new.erb"
 end
 
+post('/movies/create') do
+  @movie = Movie.new
+  @movie.title = params['title']
+  @movie.director = params['director']
+  @movie.year = params['year']
+end
+
