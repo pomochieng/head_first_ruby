@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <% if true %>
-            <h1>This HTML will be included!</h1>
-        <% end %>
-        <% if false %>
-            <h1>This won't!</h1>
-        <% end %>
+        <ul>
+            <% [1, 2, 3].each do |number| %>
+                <li><%= number %></li>
+            <% end %>
+        </ul>
     </body>
 </html>
 
