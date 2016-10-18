@@ -16,6 +16,7 @@ second_movie.year = 2010
 store.transaction do
   store["Spirited Away"] = first_movie
   store["Inception"] = second_movie
+
   p store["Inception"]
 end
 

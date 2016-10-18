@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'movie'
+require 'movie_store'
 
 get('/movies') do  #Responds to GET requests for "/movies".
   @movies = []     #Set up an array of movies
@@ -21,5 +22,7 @@ post('/movies/create') do
   @movie.title = params['title']
   @movie.director = params['director']
   @movie.year = params['year']
+  store.save(@movie)
+  redirect '/movies/new'
 end
 
